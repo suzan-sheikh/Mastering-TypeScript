@@ -16,3 +16,4 @@ function calculateTotal2(item: CartItem): number{
     const {price, quantity = 1} = item;
     return price * quantity;
 }
+console.log(calculateTotal2({name: 'suzan', price: 10, quantity: 10}));
