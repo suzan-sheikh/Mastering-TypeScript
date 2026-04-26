@@ -9,6 +9,7 @@ type CartItem = {
 //* Example-1
 const calculateTotal = ({ price, quantity = 1 }: CartItem): number =>
   price * quantity;
+console.log(calculateTotal({name: 'suzan', price: 10, quantity: 10}));
 
 //* Example-2
 function calculateTotal2(item: CartItem): number{
