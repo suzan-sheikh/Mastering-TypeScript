@@ -23,3 +23,5 @@ console.log(calculateTotal2({ name: "suzan", price: 10, quantity: 10 }));
 type Person = {name: string; age: number};
 type JobDetails = {role: string; salary: number};
 
+type Employee = Person & JobDetails;
+
