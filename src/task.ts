@@ -25,7 +25,8 @@ type JobDetails = {role: string; salary: number};
 
 type Employee = Person & JobDetails;
 
-const getProfile = (inputEmp: Employee) => inputEmp;
-
+const getProfile = (inputEmp: Employee):string => {
+  return `Name: [${inputEmp.name}], Role: [${inputEmp.role}]`
+};
 
 console.log(getProfile({name: 'suzan', age: 30, role: 'admin', salary: 40}));
