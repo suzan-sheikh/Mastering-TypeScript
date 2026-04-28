@@ -1,4 +1,5 @@
 //* Task 1: The "Optional" Shopping Cart
+//? Scenario: You are building a checkout system. Users might buy one item by default, or specify a bulk quantity. 
 
 type CartItem = {
   name: string;
@@ -18,7 +19,9 @@ function calculateTotal2(item: CartItem): number {
 }
 console.log(calculateTotal2({ name: "suzan", price: 10, quantity: 10 }));
 
+
 //* Task 2: Merging User Profiles
+//? Scenario: A user signs up as a basic Person, but when hired, they gain JobDetails. An Employee is a union of both.
 
 type Person = {name: string; age: number};
 type JobDetails = {role: string; salary: number};
@@ -30,3 +33,6 @@ const getProfile = (inputEmp: Employee):string => {
 };
 
 console.log(getProfile({name: 'suzan', age: 30, role: 'admin', salary: 40}));
+
+
+//* Task 3: The "Safe" Data Fetcher
