@@ -36,3 +36,21 @@ console.log(getProfile({name: 'suzan', age: 30, role: 'admin', salary: 40}));
 
 
 //* Task 3: The "Safe" Data Fetcher
+
+type UserResponse = {
+  info?:{
+    address?:{
+      zipCode?: string;
+    }  
+  }
+}
+
+const getZipCode = (userResponse: UserResponse) => {
+  return userResponse
+}
+
+console.log(getZipCode({info: {
+  address: {
+    zipCode: "dhaka"
+  }
+}}));
