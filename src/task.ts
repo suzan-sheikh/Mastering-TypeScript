@@ -49,8 +49,3 @@ const getZipCode = (userResponse: UserResponse) => {
   return userResponse
 }
 
-console.log(getZipCode({info: {
-  address: {
-    zipCode: "dhaka"
-  }
-}}));
