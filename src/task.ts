@@ -52,7 +52,11 @@ const getZipCode = (userResponse: UserResponse): string => {
 
 //* Task 4: Type Assertion
 
-let secretValue: unknown = "typescript is awesome"; 
+let secretValue: unknown = "typescript is awesome";
 let result = (secretValue as string).toLocaleUpperCase();
-console.log(result);
+// console.log(result);
 
+// * Task 5: Generic Constraints
+
+const logLength = <T extends {length: number}> (input: T): number => input.length;
+console.log(logLength('amar sonar bangla'));
