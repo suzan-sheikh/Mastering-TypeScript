@@ -59,4 +59,15 @@ let result = (secretValue as string).toLocaleUpperCase();
 // * Task 5: Generic Constraints
 
 const logLength = <T extends {length: number}> (input: T): number => input.length;
-console.log(logLength('amar sonar bangla'));
+// console.log(logLength('amar sonar bangla'));
+
+
+const product = {id: 101, name: 'keyboard', price: 50};
+
+
+const resultKey = <T, K extends keyof T>(obj: T, key: K) => {
+ return (obj[key]);
+}
+
+console.log(resultKey(product, 'price' ));
+
