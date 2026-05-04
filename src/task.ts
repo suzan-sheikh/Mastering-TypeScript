@@ -43,9 +43,16 @@ type UserResponse = {
   };
 };
 
-const getZipCode = (userResponse: UserResponse):string => {
+const getZipCode = (userResponse: UserResponse): string => {
   return userResponse.info?.address?.zipCode ?? "00000";
 };
 
-console.log(getZipCode({info:{address: {zipCode: '1151251'}}}));
-console.log(getZipCode({info:{address: {} }}));
+// console.log(getZipCode({ info: { address: { zipCode: "1151251" } } }));
+// console.log(getZipCode({ info: { address: {} } }));
+
+//* Task 4: Type Assertion
+
+let secretValue: unknown = "typescript is awesome"; 
+let result = (secretValue as string).toLocaleUpperCase();
+console.log(result);
+
